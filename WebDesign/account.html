@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Labella - My Account </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="header">
+       <div class="container">
+          <div class="navbar">
+              <div class="logo">
+                  <a href="home.html"><img src="images/lrlogo.png" width="125px"></a>
+              </div>
+              <nav>
+               <ul id="MenuItems">
+                   <li><a href="home.html">Home</a></li>
+                   <li><a href="products1.html">Products</a></li>
+                   <li><a href="aboutus.html">About</a></li>
+                   <li><a href="Contact.html">Contact</a></li>
+                   <li><a href="account.html">Account</a></li>
+               </ul>
+              </nav>
+              <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+              <img src="images/menu.png" onclick="menutoggle()" class="menu-icon">
+          </div>
+          
+          
+       </div>
+      
+      </div> 
+<div class="accout-page">
+    <div class="container">
+  
+       <div class="row">
+         
+          <div class="col-2">
+             <img src="images/image1.png" width="100%">
+          </div>
+          
+           <div class="well">
+            <div class="col-2">
+              <div class="form-container">
+                 <div class="form-btn">
+                     <span onclick="login()">Login</span>
+                     <span onclick="register()">Register</span>
+                     <hr id="indicator">
+                 </div>
+                 
+               <form id="LoginForm">
+                   <input type="text" placeholder="username">
+                   <input type="password" placeholder="Password">
+                   <button type="submit" class="btn">Login</button>
+                   <a href="">Forgot password</a>
+               </form>
+
+               <form id="RegForm" action="" method="post">
+                   <input type="text" placeholder="username" name="username">
+                   <input type="email" placeholder="Email" name="email">
+                   <input type="password" placeholder="Password" name="passcode">
+                   <button type="submit" class="btn" name="save" value="submit">Register</button>
+               </form>
+              </div>
+           </div>
+           </div>
+       </div>
+</div>
+</div>
+
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col1">
+               <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col2">
+               <img src="images/logo.png">
+                <p>We are committed to provide high-quality products that are made with passion and love.</p>
+            </div>
+            <div class="footer-col3">
+               <h3>Useful Links</h3>
+                <ul>
+                    <a href="https://www.facebook.com/labellarebrandingph"> <li>Social Media Updates</a></li>
+                    <a href="https://www.facebook.com/labellarebrandingph/photos/a.2703834963068566/3744509289001123/"> <li>Return Policy</a></li>
+                    <a href="https://www.facebook.com/labellarebrandingph/photos/a.2384417221677010/3053615898090469/"> <li>Join Affiliate</a></li>
+					<a href="https://www.facebook.com/groups/246249134176896/"> <li>Group</a></li>
+                </ul>
+            </div>
+            <div class="footer-col4">
+               <h3>Follow Us</h3>
+                <ul>
+                   <a href="https://www.facebook.com/labellarebrandingph"> <li>Facebook </a> </li>
+                    <a href="https://www.tiktok.com/@labellarebrandingph?lang=en"> <li>Tiktok </a> </li>
+                    <a href="https://www.instagram.com/labellarebrandingph/"> <li>Instagram </a> </li>
+					<a href="https://shopee.ph/ianayc"> <li>Shopee</a> </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"><a href="https://www.facebook.com/JayEm1220">Copyright 2021 - Anastacio, Dignadice, Labrado</a></p>
+        <p class="copyright"><a href="https://www.facebook.com/soitmapuauniv/">This is for Project Purposes Only</a></p>
+    </div>
+    
+</div>
+
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle()
+    {
+        if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }else
+            {
+                MenuItems.style.maxHeight = "0px"
+            } 
+    }
+     
+</script>
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("indicator");
+        
+        function register(){
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)"
+            };
+        function login(){
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)"
+            };
+            
+    </script>
+    
+    
+    
+</body>
+</html>
+
